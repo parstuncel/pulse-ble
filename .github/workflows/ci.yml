@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: Package tests
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        working-directory: Packages/HeartRateKit
+        run: swift test
+
+  build:
+    name: App build (iOS Simulator)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          xcodebuild build \
+            -project Pulse.xcodeproj \
+            -scheme Pulse \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO
