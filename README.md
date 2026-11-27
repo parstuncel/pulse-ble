@@ -8,6 +8,8 @@ It shows beats per minute, a two-minute chart, sensor contact, body location, ba
 ![Swift 6](https://img.shields.io/badge/Swift-6-orange)
 ![iOS 17+](https://img.shields.io/badge/iOS-17%2B-blue)
 
+📝 **Write-up:** [Wrapping CoreBluetooth in Swift Concurrency](https://pars-tuncel.medium.com/wrapping-corebluetooth-in-swift-concurrency-236d3d71382f) explains the design on Medium.
+
 | Scan | Live | Dark mode |
 |---|---|---|
 | <img src="docs/scan.png" width="250"> | <img src="docs/live.png" width="250"> | <img src="docs/live-dark.png" width="250"> |
